@@ -51,6 +51,10 @@ section {
   margin-bottom: 5px;
 }
 
+.retorno {
+  font-size: 12px;
+}
+
 .retornoArray {
   display: block;
 }

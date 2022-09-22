@@ -11,7 +11,7 @@ export class AppComponent {
   name = 'Desafio Caixa Eletrônico';
   valor: number = 0;
   cedulas = [100, 50, 20, 10];
-  retorno: string = "";
+  retorno: string = '';
   retornoArray = [];
 
   constructor(public dialog: MatDialog) {}
@@ -24,30 +24,43 @@ export class AppComponent {
 
   limpar(): void {
     this.valor = 0;
-    this.retorno = "";
+    this.retorno = '';
+    this.retornoArray = [];
   }
 
   cancelar(): void {
     this.valor = 0;
-    this.retorno = "";
+    this.retorno = '';
+    this.retornoArray = [];
   }
 
   confimar(): void {
     let valor = this.valor;
-    this.retorno = "";
+    this.retorno = '';
+    this.retornoArray = [];
 
     for (let i = 0; i < this.cedulas.length; i++) {
       if (valor >= this.cedulas[i]) {
-        this.retornoArray.push({quantidade: Math.trunc(valor / this.cedulas[i]), cedula: this.cedulas[i]})
-        this.retorno = this.retorno + " <br /> " + (Math.trunc(valor / this.cedulas[i]) + ' nota(s) de ' + this.cedulas[i]);
+        this.retornoArray.push({
+          quantidade: Math.trunc(valor / this.cedulas[i]),
+          cedula: this.cedulas[i],
+        });
+        this.retorno =
+          this.retorno +
+          ' <br /> ' +
+          (Math.trunc(valor / this.cedulas[i]) +
+            ' nota(s) de ' +
+            this.cedulas[i]);
         valor = valor % this.cedulas[i];
       }
     }
 
     if (valor > 0) {
+      this.valor = 0;
+      this.retorno = '';
+      this.retornoArray = [];
       this.error();
     }
-
   }
 
   counter(i: number) {
