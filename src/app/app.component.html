@@ -81,7 +81,7 @@
 
     <div class="retornoArray" *ngFor="let cedula of retornoArray">
       <span *ngFor="let qtd of counter(cedula.quantidade)">
-        Cedula {{ cedula.cedula }}
+        <img src="{{cedula.cedula}}.jpg">
       </span>
       <!-- Quantidade {{ cedula.quantidade }} Cedula {{ cedula.cedula }} -->
     </div>
