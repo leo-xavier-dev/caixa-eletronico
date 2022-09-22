@@ -50,3 +50,11 @@ section {
   margin-right: 5px;
   margin-bottom: 5px;
 }
+
+.retornoArray {
+  display: block;
+}
+
+.cedula {
+  margin-right: 4px;
+}
