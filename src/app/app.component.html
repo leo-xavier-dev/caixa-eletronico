@@ -1,0 +1,89 @@
+<h3>{{ name }}</h3>
+
+<section>
+  <div class="button-row">
+    <mat-grid-list cols="4" rowHeight="180">
+      <mat-grid-tile colspan="2" rowspan="2">
+        <div class="flex-container">
+          <div class="display">{{ valor | currency }}</div>
+          <div class="button-container">
+            <button mat-fab color="default" (click)="ind(1)">
+              <span> 1 </span>
+            </button>
+            <button mat-fab color="default" (click)="ind(2)">
+              <span> 2 </span>
+            </button>
+            <button mat-fab color="default" (click)="ind(3)">
+              <span> 3 </span>
+            </button>
+          </div>
+          <div class="button-container">
+            <button mat-fab color="default" (click)="ind(4)">
+              <span> 4 </span>
+            </button>
+            <button mat-fab color="default" (click)="ind(5)">
+              <span> 5 </span>
+            </button>
+            <button mat-fab color="default" (click)="ind(6)">
+              <span> 6 </span>
+            </button>
+          </div>
+          <div class="button-container">
+            <button mat-fab color="default" (click)="ind(7)">
+              <span> 7 </span>
+            </button>
+            <button mat-fab color="default" (click)="ind(8)">
+              <span> 8 </span>
+            </button>
+            <button mat-fab color="default" (click)="ind(9)">
+              <span> 9 </span>
+            </button>
+          </div>
+          <div class="button-container">
+            <button mat-fab color="default">
+              <span> &nbsp; </span>
+            </button>
+            <button mat-fab color="default" (click)="ind(0)">
+              <span> 0 </span>
+            </button>
+            <button mat-fab color="default">
+              <span> &nbsp; </span>
+            </button>
+          </div>
+        </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="2" rowspan="2">
+        <div class="flex-container btn-acoes">
+          <div class="button-container">
+            <button mat-raised-button color="warning" (click)="limpar()">
+              <mat-icon fontIcon="cleaning_services"></mat-icon>
+              Limpar
+            </button>
+          </div>
+          <div class="button-container" (click)="cancelar()">
+            <button mat-raised-button color="accent">
+              <mat-icon fontIcon="block"></mat-icon>
+              Cancelar
+            </button>
+          </div>
+          <div class="button-container">
+            <button mat-raised-button color="success" (click)="confimar()">
+              <mat-icon fontIcon="check"></mat-icon>
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <div class="retorno" [innerHtml]="retorno"></div>
+
+    <div class="retornoArray" *ngFor="let cedula of retornoArray">
+      <span *ngFor="let qtd of counter(cedula.quantidade)">
+        Cedula {{ cedula.cedula }}
+      </span>
+      <!-- Quantidade {{ cedula.quantidade }} Cedula {{ cedula.cedula }} -->
+    </div>
+  </div>
+</section>

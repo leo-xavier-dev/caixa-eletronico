@@ -1,0 +1,52 @@
+* {
+  font-family: 'Poppins';
+}
+h3 {
+  text-align: center;
+}
+section {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+.display {
+  padding: 20px 40px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.button-container span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-acoes .button-container {
+  margin-bottom: 10px;
+}
+
+.btn-acoes .button-container button {
+  padding: 10px;
+  min-width: 130px;
+}
+
+.btn-acoes {
+  margin-top: 50px;
+}
+
+.mat-accent {
+  background-color: rgb(255, 98, 98);
+}
+.mat-warning {
+  background-color: rgb(243, 235, 0);
+}
+.mat-success {
+  background-color: rgb(0, 223, 11);
+}
+.mat-fab {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
